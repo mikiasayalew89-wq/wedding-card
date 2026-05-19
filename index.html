@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የጋብቻ ጥሪ መጥሪያ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-gold: #b8860b;
+            --white: #ffffff;
+            --bg: #fdfaf5;
+            --text: #3e3e3e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Noto Serif Ethiopic', serif;
+            background-color: var(--bg);
+            background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
+
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+            position: relative;
+            padding: 40px 20px;
+            text-align: center;
+            border: 8px double var(--gold);
+            overflow: hidden;
+        }
+
+        /* Wedding Decor - Floating Hearts / Rings */
+        .decor-rings {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .main-title {
+            font-size: 50px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Adjusted Guest Box with "ለ፦" */
+        .guest-box {
+            margin: 25px auto;
+            border-bottom: 2px solid var(--gold);
+            padding: 10px;
+            width: 85%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .to-label { 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: var(--dark-gold); 
+            white-space: nowrap;
+        }
+        
+        .guest-name { 
+            font-size: 18px; 
+            font-weight: bold; 
+            border: none; 
+            text-align: left; 
+            outline: none; 
+            width: 100%; 
+            background: transparent; 
+            color: #444;
+            font-family: 'Noto Serif Ethiopic', serif;
+        }
+
+        .verse { font-style: italic; color: #666; font-size: 14px; margin-bottom: 20px; }
+
+        .parents { font-weight: bold; font-size: 18px; margin: 20px 0; color: #222; line-height: 1.8; }
+
+        .body-text { text-align: justify; text-align-last: center; line-height: 1.8; color: #444; margin-bottom: 25px; font-size: 15px; }
+
+        /* Photo Slider */
+        .slider-container {
+            width: 100%;
+            height: 320px;
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid var(--gold);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            width: 500%;
+            height: 100%;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            width: 20%;
+            height: 100%;
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: #fdf5e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 1px dashed var(--gold);
+        }
+
+        .timer-title { font-weight: bold; color: var(--dark-gold); margin-bottom: 12px; font-size: 15px; }
+
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .timer-item { background: var(--white); padding: 8px 5px; border-radius: 5px; border: 1px solid #eee; }
+        .timer-num { font-size: 20px; font-weight: bold; color: var(--gold); display: block; }
+        .timer-label { font-size: 11px; color: #888; }
+
+        /* Host Section */
+        .host-label {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            border-top: 1px solid var(--gold);
+            display: inline-block;
+            padding-top: 12px;
+            color: var(--dark-gold);
+        }
+
+        .address {
+            margin-top: 25px;
+            font-size: 13px;
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 8px;
+            color: #666;
+            border: 1px solid #eee;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Decorative Wedding Icon -->
+        <div class="decor-rings">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <h1 class="main-title">ሰርግ</h1>
+
+        <!-- Updated Guest Section with "ለ፦" -->
+        <div class="guest-box">
+            <span class="to-label">ለ፦</span>
+            <input type="text" class="guest-name" placeholder="የእንግዳው ስም እዚህ ይጻፋል">
+        </div>
+
+        <p class="verse">«ስለዚህ እግዚአብሔር ያጣመረውን ሰው አይለየውም» <br> (ማርቆስ 10:9)</p>
+
+        <p style="color: var(--gold); font-weight: bold; font-size: 16px;">የማክበር ሰላምታችንን እያቀረብን</p>
+
+        <div class="parents">
+            የወ/ሮ ውቢት ቢሰጥ <br>
+            እና <br>
+            የአቶ ወንድምአገኘሁ ታደሰ
+        </div>
+
+        <p class="body-text">
+            የጋብቻ ሥነ-ሥርዓት እሁድ ግንቦት 30 2018 ዓ/ም በለፍቶ መሰረተ ክርስቶስ ቤተክርስቲያን ጠዋት 4:00 ሰዓት ላይ ስለሚፈጸም፤ ከቀኑ 6:00 ሰዓት ጀምሮ በሚካሄደው የምሳ ፕሮግራም ላይ ተገኝተው ደስታችንን እንዲካፈሉ በታላቅ አክብሮት ጠርተናል።
+        </p>
+
+        <!-- Photo Slider with Specified Image Names -->
+        <div class="slider-container">
+            <div class="slider-wrapper" id="slider">
+                <div class="slide" style="background-image: url('p1.jpg')">የሙሽሮች ፎቶ 1 (p1.jpg)</div>
+                <div class="slide" style="background-image: url('p2.jpg')">የሙሽሮች ፎቶ 2 (p2.jpg)</div>
+                <div class="slide" style="background-image: url('p3.jpg')">የሙሽሮች ፎቶ 3 (p3.jpg)</div>
+                <div class="slide" style="background-image: url('p4.jpg')">የሙሽሮች ፎቶ 4 (p4.jpg)</div>
+                <div class="slide" style="background-image: url('p5.jpg')">የሙሽሮች ፎቶ 5 (p5.jpg)</div>
+            </div>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-container">
+            <div class="timer-title">ለሠርጉ የቀረው ጊዜ</div>
+            <div class="timer-grid">
+                <div class="timer-item"><span class="timer-num" id="days">00</span><span class="timer-label">ቀን</span></div>
+                <div class="timer-item"><span class="timer-num" id="hours">00</span><span class="timer-label">ሰዓት</span></div>
+                <div class="timer-item"><span class="timer-num" id="minutes">00</span><span class="timer-label">ደቂቃ</span></div>
+                <div class="timer-item"><span class="timer-num" id="seconds">00</span><span class="timer-label">ሰከንድ</span></div>
+            </div>
+        </div>
+
+        <!-- Corrected Host Section -->
+        <div class="host-label">
+            ጠሪ፦ ወ/ሮ ሰብለ ደገፋ
+        </div>
+
+        <div class="address">
+            አድራሻ፦ ለፍቶ 2ሺ ህንጻ ጀርባ (ለፍቶ መሰረተ ህይወት ቤ/ክ)
+        </div>
+    </div>
+
+    <script>
+        // Automatic Slider Logic
+        let index = 0;
+        const slider = document.getElementById('slider');
+        function autoSlide() {
+            index = (index + 1) % 5;
+            slider.style.transform = `translateX(-${index * 20}%)`;
+        }
+        setInterval(autoSlide, 3000);
+
+        // Countdown Logic (Target Date: June 7, 2026 - Ginbot 30, 2018 E.C.)
+        const targetDate = new Date("June 7, 2026 10:00:00").getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+                document.getElementById('days').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                document.getElementById('hours').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            } else {
+                document.getElementById('days').innerText = "00";
+                document.getElementById('hours').innerText = "00";
+                document.getElementById('minutes').innerText = "00";
+                document.getElementById('seconds').innerText = "00";
+            }
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Initial call
+    </script>
+</body>
+</html>
